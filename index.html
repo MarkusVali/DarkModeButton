@@ -1,0 +1,47 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <title>Kurwaspot</title>
+    <style>
+        body {
+          padding: 25px;
+          background-color: black;
+          color: white;
+          font-size: 25px;
+        }
+    
+        .dark-mode {
+          background-color: white;
+          color: black;
+        }
+      </style>
+    
+</head>
+
+<body class="dark-mode">
+    <div class="container">
+      <h1>Kurwaspot on minu lemmik</h1>
+      <button class="btn btn-dark" onclick="toggleTheme()">Vaheta värviskeemi</button>
+    </div>
+  
+    <script>
+        function toggleTheme() {
+            var body = document.querySelector('body');
+            var button = document.querySelector('.btn');
+    
+            if (body.classList.contains('dark-mode')) {
+            body.classList.remove('dark-mode');
+            button.classList.remove('btn-light');
+            button.classList.add('btn-dark');
+            button.textContent = 'Vaheta hele värviskeem';
+            } else {
+            body.classList.add('dark-mode');
+            button.classList.remove('btn-dark');
+            button.classList.add('btn-light');
+            button.textContent = 'Vaheta tume värviskeem';
+            }
+        }
+    </script>
+</body>
